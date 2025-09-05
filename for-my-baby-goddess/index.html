@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Special Welcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      @keyframes fly {
+        0% {
+          bottom: -20%;
+          opacity: 1;
+          transform: scale(0.2) rotate(0deg);
+        }
+        100% {
+          bottom: 120%;
+          opacity: 0;
+          transform: scale(1.2) rotate(25deg);
+        }
+      }
+      .animate-fly {
+        animation: fly linear infinite;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      @keyframes pulse-glow {
+        0%, 100% {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f09, 0 0 20px #f09;
+        }
+        50% {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f09, 0 0 40px #f09;
+        }
+      }
+      .animate-pulse-glow {
+        animation: pulse-glow 2.5s ease-in-out infinite;
+      }
+      
+      @keyframes wave-paw-left {
+        0%, 100% { transform: translateY(0) rotate(-2deg); }
+        50% { transform: translateY(-3px) rotate(2deg); }
+      }
+      
+      @keyframes wave-paw-right {
+        0%, 100% { transform: translateY(0) rotate(2deg); }
+        50% { transform: translateY(-3px) rotate(-2deg); }
+      }
+
+      .animate-wave-left {
+        animation: wave-paw-left 2s ease-in-out infinite;
+      }
+      .animate-wave-right {
+        animation: wave-paw-right 2s ease-in-out infinite;
+      }
+
+      @keyframes pound {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+      .animate-pound {
+        animation: pound 1.5s ease-in-out infinite;
+      }
+      
+      @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 1s ease-out forwards;
+      }
+
+      .font-dancing-script {
+        font-family: 'Dancing Script', cursive;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
